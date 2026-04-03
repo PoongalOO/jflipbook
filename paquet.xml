@@ -9,7 +9,7 @@
 >
 	<nom>jFlipBook</nom>
 	<slogan>Livre d'images avec effet de pages tournantes</slogan>
-	<auteur lien='https://contrib.spip.net/jFlipBook'>Samuel « PoongalOO » Bocharel</auteur>
+	<auteur lien='https://webinfo-concept.fr'>PoongalOO</auteur>
 	<licence>GPL</licence>
 
 	<pipeline nom="insert_head_css" inclure="jflipbook_pipelines.php" />
