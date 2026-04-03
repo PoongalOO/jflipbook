@@ -8,7 +8,7 @@
 	documentation="https://contrib.spip.net/jFlipBook"
 >
 	<nom>jFlipBook</nom>
-	<slogan>Livre d'images avec effet de pages tournantes</slogan>
+	<description>Livre d'images avec effet de pages tournantes</description>
 	<auteur lien='https://webinfo-concept.fr'>PoongalOO</auteur>
 	<licence>GPL</licence>
 
