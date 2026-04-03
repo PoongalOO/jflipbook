@@ -1,0 +1,19 @@
+<paquet
+	prefix="jflipbook"
+	categorie="multimedia"
+	version="1.0.0"
+	etat="test"
+	compatibilite="[4.0.0;5.99.*]"
+	logo="img_pack/jflip.png"
+	documentation="https://contrib.spip.net/jFlipBook"
+>
+	<nom>jFlipBook</nom>
+	<slogan>Livre d'images avec effet de pages tournantes</slogan>
+	<auteur lien='https://contrib.spip.net/jFlipBook'>Samuel « PoongalOO » Bocharel</auteur>
+	<licence>GPL</licence>
+
+	<pipeline nom="insert_head_css" inclure="jflipbook_pipelines.php" />
+	<pipeline nom="jquery_plugins" inclure="jflipbook_pipelines.php" />
+
+	<menu nom="configurer_jflipbook" parent="menu_configuration" icone="img_pack/jflip.png" titre="jflipbook:configurer_titre" />
+</paquet>
