@@ -1,71 +1,28 @@
 <?php
 
-// This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// encodage des caractères : ê = &ecirc; - é = &eacute; - à = &agrave; - è = &egrave;
-// encodage des caractères : - ù= - î= - ° = &#176;
-// format : ' ' => " ",
+if (!defined('_ECRIRE_INC_VERSION')) {
+	return;
+}
 
-$GLOBALS[$GLOBALS['idx_lang']] = array(
+$GLOBALS[$GLOBALS['idx_lang']] = [
+	'configurer_titre' => 'Configurer jFlipBook',
+	'config_enregistree' => 'Configuration enregistrée.',
 
-'article_num' => "Article n &#176;",
+	'largeur' => 'Largeur du livre (px)',
+	'hauteur' => 'Hauteur du livre (px)',
+	'couleur' => 'Couleur de fond des pages',
+	'coins' => 'Position des coins réactifs',
+	'scale' => 'Redimensionnement des images',
 
-'boite_info' => "<i>Informations :</i>",
+	'fill' => 'Redimensionner les images en gardant le ratio',
+	'fit' => 'Redimensionner uniquement les images trop grandes',
+	'noresize' => 'Ne pas redimensionner les images',
+	'false' => 'En bas, à gauche et à droite',
+	'true' => 'En haut, à gauche et à droite',
 
-'clic_editer' => "Cliquez ici pour &eacute;diter",
-'conf_docs' => "<strong>Accepter les documents joints dans les articles :</strong><br />",
-'conf_mots' => "<strong>Activation des mots-clés :</strong><br />",
-
-'descriptif' => "<strong>Descriptif : </strong>",
-'discipline' => "<strong>Discipline : </strong>",
-
-'editer_mentions' => "Editer les mentions l&eacute;gales",
-'effet' => "<strong>Effet de transition actuel : </strong>",
-'eva_mentions' => "Gestion des mentions l&eacute;gales",
-
-'page_publique' => "Aller &agrave; la page sommaire",
-'presentation' => "Ce plugin permet de g&eacute;rer les renseignements &agrave; compl&eacute;ter pour les mentions l&eacute;gales<br/>",
-'probleme_base' => "Il y a un probl&egrave;me dans votre base de donn&eacute;es.<br/>",
-
-'lienoff1' => "<a href='http://eva-web.edres74.net' target='_blank'>http://eva-web.edres74.net</a><br/>",
-'lienoff2' => "<a href='' target='_blank' ></a><br/>",
-
-'modif_conf' => "Modifier la configuration",
-'mot_titre' => "<strong>Nom du mot-cl&eacute; : </strong>",
-'mot_descriptif' => "<strong>Descriptif : </strong>",
-
-'projeteva' => "<br />jFlipBook est d&eacute;velopp&eacute; dans le cadre du projet EVA-WEB<br />",
-
-'siteoff1' => "<strong>Site officiel eva-web :</strong><br/>",
-'siteoff2' => "<strong></strong><br/>",
-
-'texte_article' => "<strong>Texte de l'article : </strong>",
-'texte_descriptif' => "<br />Ce plugin transforme les images d'un article en un petit livre feuilletable. Les coins sont cliquables et permettent de passer d'une page &agrave; une autre 
-    							avec un effet de tourner de page.<br />",
-'texte_motcle' => "<br/><strong>V&eacute;rification du mot-cl&eacute; n&eacute;cessaire au fonctionnement :</strong><br/>",
-'texte_reglages' => "<br/><strong>Configuration actuelle : </strong><br/>",
-'titre' => "<strong>Titre du bloc : </strong>",
-'titre_boite_principale' => "Param&egrave;trage du plugin :",
-'titre_presentation' => "<strong>Pr&eacute;sentation :</strong><br/>",
-'titre_page' => "JFLIPBOOK : livre avec effet de tourner de page",
-
-'vitesse' => "<strong>Vitesse entre les transitions (1000=1seconde) : </strong>",
-'verification_conf' => "<br/><strong>V&eacute;rification de la configuration du site<br/></strong>",
-
-'quitter' => "Quitter ce formulaire",
-
-//paramètres
-'fill' => "Les images sont redimensionn&eacute;es tout en gardant le ratio",
-'fit' => "Les images trop grandes sont redimensionn&eacute;es",
-'noresize' => "Les images ne sont pas redimensionn&eacute;es",
-
-'false' => "En bas, à gauche et à droite",
-'true' => "En haut, à gauche et à droite",
-
-'largeur' => "Largeur du livre (en pixel) : ",
-'hauteur' => "Hauteur du livre (en pixel) : ",
-'couleur' => "Couleur du fond des pages : ",
-'coins' => "Position des coins r&eacute;actifs : ",
-'scale' => "Redimensionnement des images : "
-
-);
-?>
+	'erreur_largeur' => 'La largeur doit être un nombre supérieur ou égal à 100.',
+	'erreur_hauteur' => 'La hauteur doit être un nombre supérieur ou égal à 100.',
+	'erreur_couleur' => 'La couleur doit être un code hexadécimal valide (ex. #cccccc).',
+	'erreur_corners' => 'La position des coins sélectionnée est invalide.',
+	'erreur_scale' => 'Le mode de redimensionnement est invalide.',
+];

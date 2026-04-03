@@ -1,0 +1,50 @@
+<div class="formulaire_spip formulaire_configurer formulaire_#FORM">
+	[<p class="reponse_formulaire reponse_formulaire_ok">(#ENV*{message_ok})</p>]
+	[<p class="reponse_formulaire reponse_formulaire_erreur">(#ENV*{message_erreur})</p>]
+
+	<form method="post" action="#ENV{action}">
+		#ACTION_FORMULAIRE
+		<div class="editer-groupe">
+			<div class="editer editer_largeur[ (#ENV**{erreurs/largeur}|oui)erreur]">
+				<label for="largeur"><:jflipbook:largeur:></label>
+				[<span class="erreur_message">(#ENV**{erreurs/largeur})</span>]
+				<input type="number" class="text" name="largeur" id="largeur" min="100" value="#ENV{largeur}" />
+			</div>
+
+			<div class="editer editer_hauteur[ (#ENV**{erreurs/hauteur}|oui)erreur]">
+				<label for="hauteur"><:jflipbook:hauteur:></label>
+				[<span class="erreur_message">(#ENV**{erreurs/hauteur})</span>]
+				<input type="number" class="text" name="hauteur" id="hauteur" min="100" value="#ENV{hauteur}" />
+			</div>
+
+			<div class="editer editer_couleur[ (#ENV**{erreurs/couleur}|oui)erreur]">
+				<label for="couleur"><:jflipbook:couleur:></label>
+				[<span class="erreur_message">(#ENV**{erreurs/couleur})</span>]
+				<input type="text" class="text" name="couleur" id="couleur" value="#ENV{couleur}" placeholder="#cccccc" />
+			</div>
+
+			<div class="editer editer_corners[ (#ENV**{erreurs/corners}|oui)erreur]">
+				<label for="corners"><:jflipbook:coins:></label>
+				[<span class="erreur_message">(#ENV**{erreurs/corners})</span>]
+				<select name="corners" id="corners">
+					<option value="0"[(#ENV{corners}|=={0}|oui) selected="selected"]><:jflipbook:false:></option>
+					<option value="1"[(#ENV{corners}|=={1}|oui) selected="selected"]><:jflipbook:true:></option>
+				</select>
+			</div>
+
+			<div class="editer editer_scale[ (#ENV**{erreurs/scale}|oui)erreur]">
+				<label for="scale"><:jflipbook:scale:></label>
+				[<span class="erreur_message">(#ENV**{erreurs/scale})</span>]
+				<select name="scale" id="scale">
+					<option value="noresize"[(#ENV{scale}|=={noresize}|oui) selected="selected"]><:jflipbook:noresize:></option>
+					<option value="fit"[(#ENV{scale}|=={fit}|oui) selected="selected"]><:jflipbook:fit:></option>
+					<option value="fill"[(#ENV{scale}|=={fill}|oui) selected="selected"]><:jflipbook:fill:></option>
+				</select>
+			</div>
+		</div>
+
+		<p class="boutons">
+			<input type="submit" class="submit" value="<:bouton_enregistrer:>" />
+		</p>
+	</form>
+</div>
