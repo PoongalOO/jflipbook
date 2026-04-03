@@ -1,0 +1,46 @@
+#CACHE{0}
+<form method="post">[(#ENV{_cfg_}|form_hidden)]
+
+[(#REM) descriptif=
+<h4>Param&egrave;trage des jFlipBooks</h4>
+Ici vous pouvez modifier les dimensions, la couleur, la position des coins r&eacute;actifs et le redimensionnement des images.<br />
+<br /><a href="http://eva-web.edres74.net/spip.php?rubrique4" class="spip_out">Documentation officielle</a>
+]
+
+[(#REM) titre= Param&egrave;trage des jFlipBooks]
+[(#REM) liens*=qualif]
+
+<fieldset><legend>jFlipBooks</legend>
+<label>Dimensions des pages d'un jFlipBooks (s'applique à tous les livres jFlip) : </label><br />
+	<label>Largeur : </label><input type="text" name="largeur" value="#ENV{largeur,450}" /><br />
+	<label>Hauteur : </label><input type="text" name="hauteur" value="#ENV{hauteur,500}" /><br /><br />
+
+<label>Code de la couleur du fond des livres : </label><input type="text" name="couleur" value="#ENV{couleur,#ccc}" /><br /><br />
+
+<label>Position des coins réactifs pour feuilleter vers l'avant et l'arrière :</label><br />
+<select name="corners">
+	<option value="#ENV{corners,false}">En bas, à gauche et à droite</option>
+	<option value="#ENV{corners,true}">En haut, à gauche et à droite</option>
+</select>
+<br/><br/>
+
+<label>Redimensionnement des images : </label>
+<select name="scale">
+	<option value="#ENV{scale,noresize}">Ne pas redimensionner les images</option>
+	<option value="#ENV{scale,fit}">Redimensionner les images trop grandes</option>
+	<option value="#ENV{scale,fill}">Redimensionner les images en gardant le ratio</option>	
+</select>
+<br/><br/>
+
+</fieldset>
+
+<input type="submit" name="_cfg_ok" value="<:enregistrer:>" />
+<input type="submit" name="_cfg_delete" value="<:effacer_config:>" />
+<br /><br />
+</form>
+
+<form method="post" action="?exec=jflipbook">
+<input type="submit" value="Retour à la page du plugin" />
+</form>
+
+#CFG_ARBO{jflipbook}
